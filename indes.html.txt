@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Reframe | Wellness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Persistent Header -->
+        <header>
+            <div class="status-bar">
+                <span class="online-pulse"></span> <span id="sync-text">Connecting to nature...</span>
+            </div>
+            <h1>Nature Reframe</h1>
+        </header>
+
+        <!-- Main Content Screens -->
+        <main id="screen-container">
+            <!-- Home Screen -->
+            <section id="home" class="screen active">
+                <div class="garden-viewport" id="garden-view"></div>
+                <div class="mood-selector">
+                    <p>How is your heart today?</p>
+                    <div class="mood-grid">
+                        <button onclick="setMood('angry')">Anger</button>
+                        <button onclick="setMood('stressed')">Stress</button>
+                        <button onclick="setMood('lonely')">Loneliness</button>
+                    </div>
+                </div>
+                <textarea id="vent-input" placeholder="Release your thoughts here..."></textarea>
+                <button class="primary-btn" onclick="handleReframe()">Plant & Reframe</button>
+            </section>
+
+            <!-- Music Screen -->
+            <section id="music" class="screen">
+                <h2>Healing Sounds</h2>
+                <div class="audio-list" id="audio-list"></div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button onclick="changeScreen('home')">🌿</button>
+            <button onclick="changeScreen('music')">🎵</button>
+            <button onclick="changeScreen('stats')">📈</button>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
